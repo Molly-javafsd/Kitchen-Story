@@ -110,14 +110,14 @@ public class MainController {
 			else {
 				String msg="Check credentials and try again..Incorrect Password!!";
 				mv.addObject("msg",msg);
-				mv.setViewName("userlogin.jsp");
+				mv.setViewName("userlogin1.jsp");
 			}
 			
 		}
 		else {
 			String msg="Not registered!!Sign Up First..";
 			mv.addObject("msg",msg);
-			mv.setViewName("userlogin.jsp");
+			mv.setViewName("userlogin1.jsp");
 		}
 		
 	
