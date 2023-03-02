@@ -26,9 +26,9 @@ body {
 <title>Insert title here</title>
 </head>
 <body>
-<h1><b><i>"Showing Food List"</i></b></h1><br><br>
+<h1><b><i>"Showing Food List"</i></b></h1><br>
 <%List<FoodItem> e=(List<FoodItem>)request.getAttribute("list"); %>
-<table  class="table table-hover">
+<table class="table table-hover">
 <tr><th>Food_ID</th><th>Dish_Name</th><th>Dish_Category</th><th>Dish_Price</th><th>Picture</th><th colspan="2"></th></tr>
 
 <%for(FoodItem es:e){%>
@@ -45,14 +45,14 @@ String base64Encoded = new String(encodeBase64, "UTF-8");
 <form action="deletefood">
 <input type="hidden" name="fid" value=<%=es.getFid() %>>
 <div style="text-align:center">
-<button type="submit" class="btn btn-primary">Delete Item</button>
+<button type="submit" class="btn btn-danger">Delete <%=es.getFood_name() %></button>
 </div>
 </form>
 <br>
 <form action="editfood1.jsp">
 <input type="hidden" name="fid" value=<%=es.getFid() %>>
 <div style="text-align:center">
-<button type="submit" class="btn btn-primary">Update Item</button>
+<button type="submit" class="btn btn-success">Update <%=es.getFood_name() %></button>
 </div>
 </form></td>
 </tr>
